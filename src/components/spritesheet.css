@@ -1,0 +1,78 @@
+.sprite {
+    background: url('../images/spritesheet-normal.png') no-repeat top left;
+    display: block;
+}
+
+.sprite-logo {
+    background-position: 0 0;
+    width: 195px;
+    height: 102px;
+}
+
+.sprite-first {
+    background-position: 0 -103px;
+    width: 76px;
+    height: 75px;
+}
+
+.sprite-first:hover:not([disabled]),
+.sprite-first:active:not([disabled]),
+.sprite-first:focus:not([disabled]) {
+    background-position: -77px -103px;
+}
+
+.sprite-last {
+    background-position: -196px 0;
+    width: 75px;
+    height: 75px;
+}
+
+.sprite-last:hover:not([disabled]),
+.sprite-last:active:not([disabled]),
+.sprite-last:focus:not([disabled]) {
+    background-position: -196px -76px;
+}
+
+.sprite-prev {
+    background-position: 0 -179px;
+    width: 76px;
+    height: 74px;
+}
+
+.sprite-prev:hover:not([disabled]),
+.sprite-prev:active:not([disabled]),
+.sprite-prev:focus:not([disabled]) {
+    background-position: -77px -179px;
+}
+
+.sprite-fb {
+    background-position: -154px -179px;
+    width: 76px;
+    height: 73px;
+}
+
+.sprite-fb:hover:not([disabled]),
+.sprite-fb:active:not([disabled]),
+.sprite-fb:focus:not([disabled]) {
+    background-position: -272px 0;
+}
+
+.sprite-next {
+    background-position: -272px -74px;
+    width: 75px;
+    height: 73px;
+}
+
+.sprite-next:hover:not([disabled]),
+.sprite-next:active:not([disabled]),
+.sprite-next:focus:not([disabled]) {
+    background-position: -272px -148px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .sprite {
+        background-image: url('../images/spritesheet-retina.png');
+        background-size: 349px 254px;
+    }
+}

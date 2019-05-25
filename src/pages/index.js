@@ -45,7 +45,6 @@ const IndexPage = () => {
   const stripProps = { ...lastStrip.edges[0].node, previous: lastStrip.edges[0].next, first: firstStrip.edges[0].node }; //we have desc, so next is previous :)
   return (
     <Layout>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <Strip {...stripProps}></Strip>
     </Layout>
   );
