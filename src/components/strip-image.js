@@ -11,7 +11,7 @@ const StripImage = ({ src, ...props }) => {
           node {
             name
             childImageSharp {
-              fluid(maxWidth: 587) {
+              fluid(maxWidth: 822) {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -27,7 +27,7 @@ const StripImage = ({ src, ...props }) => {
 
   return (
     <Img
-    style= {{maxWidth:587}}
+    style= {{maxWidth:822}}
       fluid={match.node.childImageSharp.fluid}
       {...props}
     />

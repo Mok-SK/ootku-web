@@ -16,7 +16,7 @@ const IndexPage = () => {
             author
           }
         }
-        lastStrip:allStripsYaml(sort: {fields: date, order:DESC}, limit:2) {
+        lastStrip:allStripsYaml(sort: {fields: date, order:DESC}, limit:1) {
           edges {
             node {
               title
@@ -29,7 +29,7 @@ const IndexPage = () => {
             }
           }
         }
-        firstStrip:allStripsYaml(sort: {fields: date, order:ASC}, limit:1) {
+        firstStrip:allStripsYaml(sort: {fields: date, order:ASC}, limit:2) {
           edges {
             node {
               title
@@ -37,12 +37,15 @@ const IndexPage = () => {
               id
               path
             }
+            next {
+              path
+            }
           }
         }
       }
     `
   )
-  const stripProps = { ...lastStrip.edges[0].node, previous: lastStrip.edges[0].next, first: firstStrip.edges[0].node }; //we have desc, so next is previous :)
+  const stripProps = { ...firstStrip.edges[0].node, next: firstStrip.edges[0].next, last: lastStrip.edges[0].node }; //we have desc, so next is previous :)
   return (
     <Layout>
       <Strip {...stripProps}></Strip>
